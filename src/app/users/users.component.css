@@ -1,0 +1,31 @@
+.container {
+  position: relative;
+}
+
+h1 {
+  font-size: 28px;
+  color: #717070;
+}
+
+h2 {
+  font-size: 22px;
+  color: #717070;
+}
+
+.fa-times-circle-o {
+  font-size: 18px;
+  color: #717070;
+}
+
+.list-group-item {
+  cursor: pointer;
+}
+
+.username {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 50px;
+  left: 0;
+  padding: 12px;
+}

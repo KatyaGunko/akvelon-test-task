@@ -1,0 +1,11 @@
+.invisible {
+  opacity: 0;
+}
+
+.container {
+  position: relative;
+}
+
+.is-danger {
+  color: #DA0000;
+}

@@ -1,0 +1,39 @@
+<div class="container">
+  <h1 class="mt-2">Welcome to the users app!</h1>
+  <div class="row mt-5">
+    <div class="col">
+      <app-loader *ngIf="usersListLoading$ | async"></app-loader>
+
+      <ul class="list-group">
+        <li class="list-group-item justify-content-between"
+          *ngFor="let user of users$ | async">
+          <app-loader *ngIf="(deleteUserInProgress$ | async) === user.id"></app-loader>
+          <span class="username" [routerLink]="user.id">{{user.firstName}} {{user.lastName}}</span>
+
+          <span class="badge badge-default badge-pill float-right"
+                (click)="openDeleteModal(user)">
+            <i class="fa fa-times-circle-o" aria-hidden="true"></i>
+          </span>
+        </li>
+      </ul>
+
+      <hr>
+
+      <button class="btn btn-primary" [routerLink]="['/users']">Add New User</button>
+    </div>
+    <div class="col">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+
+<ngx-smart-modal #deleteModal [identifier]="'deleteModal'">
+  <h2>Delete User</h2>
+
+  <p>
+    Are you sure you what to delete {{userToDelete?.firstName}} {{userToDelete?.lastName}} from the system?
+  </p>
+
+  <button class="btn btn-default float-right" (click)="deleteModal.close()">Close</button>
+  <button class="btn btn-primary float-right" (click)="deleteUser(userToDelete?.id)">Delete</button>
+</ngx-smart-modal>
