@@ -1,0 +1,65 @@
+{
+  "users": [
+    {
+      "firstName": "Dwayne",
+      "lastName": "Johnson",
+      "email": "dwayne.johnson@gmail.com",
+      "position": "Chief Technical Officer",
+      "id": 1
+    },
+    {
+      "firstName": "Robert",
+      "lastName": "Downey Jr.",
+      "email": "robert.downey.jr@gmail.com",
+      "position": "Tech-Lead",
+      "id": 2
+    },
+    {
+      "firstName": "Jason",
+      "lastName": "Momoa",
+      "email": "jason.momoa@gmail.com",
+      "position": "Senior Software Developer",
+      "id": 4
+    },
+    {
+      "firstName": "Tom",
+      "lastName": "Holland",
+      "email": "tom.holland@gmail.com",
+      "position": "Middle Software Developer",
+      "id": 5
+    },
+    {
+      "firstName": "Gal",
+      "lastName": "Gadot",
+      "email": "gal.gadot@gmail.com",
+      "position": "Team-Lead",
+      "id": 6
+    }
+  ],
+  "positions": [
+    {
+      "id": 1,
+      "name": "Junior Software Developer"
+    },
+    {
+      "id": 2,
+      "name": "Middle Software Developer"
+    },
+    {
+      "id": 3,
+      "name": "Senior Software Developer"
+    },
+    {
+      "id": 4,
+      "name": "Team-Lead"
+    },
+    {
+      "id": 5,
+      "name": "Tech-Lead"
+    },
+    {
+      "id": 6,
+      "name": "Chief Technical Officer"
+    }
+  ]
+}

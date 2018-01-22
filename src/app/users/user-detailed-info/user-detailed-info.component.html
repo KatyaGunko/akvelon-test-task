@@ -1,0 +1,69 @@
+<div class="container">
+  <app-loader *ngIf="userDetailedInfoInProgress$ | async"></app-loader>
+
+  <form [formGroup]="userDetailsForm"
+        class="container"
+        (submit)="submit()"
+        novalidate>
+    <!--FIRST NAME-->
+    <div class="form-group">
+      <label class="label">First Name</label>
+      <div class="control">
+        <input type="text"
+               class="form-control"
+               [ngClass]="{'is-danger': isFieldInvalid('firstName')}"
+               [formControlName]="'firstName'">
+
+        <p class="help is-danger"
+           [ngClass]="{'invisible': !isFieldInvalid('firstName')}">
+          First Name is required
+        </p>
+      </div>
+    </div>
+
+    <!--LAST NAME-->
+    <div class="form-group">
+      <label class="label">Last Name</label>
+      <div class="control">
+        <input type="text"
+               class="form-control"
+               [ngClass]="{'is-danger': isFieldInvalid('lastName')}"
+               [formControlName]="'lastName'">
+
+        <p class="help is-danger"
+           [ngClass]="{'invisible': !isFieldInvalid('lastName')}">
+          Last Name is required
+        </p>
+      </div>
+    </div>
+
+    <!--EMAIL-->
+    <div class="form-group">
+      <label class="label">Email</label>
+      <div class="control">
+        <input type="text"
+               class="form-control"
+               [ngClass]="{'is-danger': isFieldInvalid('email')}"
+               [formControlName]="'email'">
+
+        <p class="help is-danger"
+           [ngClass]="{'invisible': !isFieldInvalid('email')}">
+          Email is invalid
+        </p>
+      </div>
+    </div>
+
+    <!--POSITION-->
+    <div class="form-group">
+      <label class="label">Position</label>
+      <div class="control">
+        <select class="form-control" [formControlName]="'position'">
+          <option *ngFor="let position of userPositions$ | async"
+                  [value]="position.name">{{ position.name }}</option>
+        </select>
+      </div>
+    </div>
+
+    <button class="btn btn-success float-right" [disabled]="userDetailsForm.invalid">Save</button>
+  </form>
+</div>

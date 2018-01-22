@@ -1,0 +1,20 @@
+.custom-loader {
+  position: absolute;
+  background-color: #F5F7FA;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  opacity: 0.8;
+  z-index: 100;
+}
+
+.custom-loader i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -15px;
+  margin-left: -10px;
+  color: #CCCCCC;
+  font-size: 32px;
+}
